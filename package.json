@@ -1,5 +1,5 @@
 {
-  "name": "MyBlog",
+  "name": "wxserver",
   "version": "0.0.1",
   "scripts": {
     "predev": "start tsc",
