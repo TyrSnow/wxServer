@@ -1,0 +1,25 @@
+{
+  "name": "MyBlog",
+  "version": "0.0.1",
+  "scripts": {
+    "predev": "start tsc",
+    "dev": "egg-bin dev",
+    "init": "cnpm install"
+  },
+  "dependencies": {
+    "egg": "^2.0.0",
+    "egg-scripts": "^2.1.0",
+    "mongoose": "^4.12.6"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^4.7.24",
+    "@types/node": "^8.0.47",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.6.1",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.0.0",
+    "egg-bin": "^4.3.5",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.13.0"
+  }
+}
