@@ -4,7 +4,16 @@
   "scripts": {
     "predev": "start tsc",
     "dev": "egg-bin dev",
-    "init": "cnpm install"
+    "init": "cnpm install",
+    "start": "egg-scripts start --daemon",
+    "stop": "egg-scripts stop",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
   },
   "dependencies": {
     "egg": "^2.0.0",
