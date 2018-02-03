@@ -13,3 +13,4 @@ run/
 *.map
 *.js
 !.eslintrc.js
+!test/**/*.js
