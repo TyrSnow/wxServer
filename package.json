@@ -12,7 +12,7 @@
     "test-local": "egg-bin test",
     "precov": "tsc",
     "cov": "egg-bin cov",
-    "lint": "eslint ./**/*.ts",
+    "lint": "eslint *.ts",
     "ci": "npm run lint && npm run cov",
     "autod": "autod"
   },
