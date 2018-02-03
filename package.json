@@ -36,5 +36,13 @@
     "ts-node": "^3.3.0",
     "typescript": "^2.6.1",
     "typescript-eslint-parser": "^12.0.0"
-  }
+  },
+  "repository": {
+    "url": "https://github.com/TyrSnow/wxServer"
+  },
+  "author": {
+    "name": "Tianyu",
+    "email": "1127114376@qq.com"
+  },
+  "license": "MIT"
 }
