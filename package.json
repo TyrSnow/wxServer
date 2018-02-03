@@ -23,12 +23,13 @@
   "devDependencies": {
     "@types/mongoose": "^4.7.24",
     "@types/node": "^8.0.47",
-    "ts-node": "^3.3.0",
-    "typescript": "^2.6.1",
     "autod": "^3.0.1",
     "autod-egg": "^1.0.0",
-    "egg-bin": "^4.3.5",
+    "egg-bin": "^4.3.7",
     "egg-ci": "^1.8.0",
-    "egg-mock": "^3.13.0"
+    "egg-mock": "^3.13.0",
+    "eslint": "^4.17.0",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.6.1"
   }
 }
