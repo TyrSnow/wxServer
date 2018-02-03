@@ -4,15 +4,12 @@
     "target": "es2017",
     "noImplicitAny": false,
     "sourceMap": true,
-    "rootDir":"./src",
-    "outDir":"./",
-    "watch": true
+    "watch": false
   },
   "include":[
-    "./src/**/*"
+    "./**/*.ts"
   ],
-  "exclude":[
-    "views",
-    "static"
+  "exclude": [
+    "node_modules"
   ]
 }

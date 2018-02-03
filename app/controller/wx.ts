@@ -5,10 +5,9 @@ export default class WXController extends Controller {
     const { query } = this.ctx;
     const { signature, timestamp, nonce, echostr } = query;
     const { TOKEN } = process.env;
-    const queryArray = [ TOKEN, timestamp, nonce ].sort((a, b) => {
-      return a < b ? -1: 1;
+    const queryArray = [TOKEN, timestamp, nonce].sort((a, b) => {
+      return a < b ? -1 : 1;
     });
-    console.log(queryArray)
     let strQuery = queryArray.join('');
     let hash = crypto.createHash('sha1');
     hash.update(strQuery);

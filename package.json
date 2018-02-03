@@ -2,7 +2,7 @@
   "name": "wxserver",
   "version": "0.0.1",
   "scripts": {
-    "predev": "start tsc",
+    "predev": "start tsc --watch",
     "dev": "egg-bin dev",
     "init": "cnpm install",
     "start": "egg-scripts start --daemon",
@@ -10,8 +10,9 @@
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
+    "precov": "tsc",
     "cov": "egg-bin cov",
-    "lint": "eslint .",
+    "lint": "eslint ./**/*.ts",
     "ci": "npm run lint && npm run cov",
     "autod": "autod"
   },
@@ -25,11 +26,15 @@
     "@types/node": "^8.0.47",
     "autod": "^3.0.1",
     "autod-egg": "^1.0.0",
+    "babel-eslint": "^8.2.1",
     "egg-bin": "^4.3.7",
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.13.0",
     "eslint": "^4.17.0",
+    "eslint-config-alloy": "^1.4.1",
+    "eslint-plugin-typescript": "^0.8.1",
     "ts-node": "^3.3.0",
-    "typescript": "^2.6.1"
+    "typescript": "^2.6.1",
+    "typescript-eslint-parser": "^12.0.0"
   }
 }

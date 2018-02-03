@@ -3,4 +3,4 @@ export default (appInfo) => {
     keys: `${appInfo.name}_4033365`,
     middleware: []
   };
-}
+};

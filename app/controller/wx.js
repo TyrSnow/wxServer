@@ -10,7 +10,6 @@ class WXController extends egg_1.Controller {
         const queryArray = [TOKEN, timestamp, nonce].sort((a, b) => {
             return a < b ? -1 : 1;
         });
-        console.log(queryArray);
         let strQuery = queryArray.join('');
         let hash = crypto.createHash('sha1');
         hash.update(strQuery);
