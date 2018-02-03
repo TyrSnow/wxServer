@@ -1,2 +1,2 @@
 # WXSERVER
-[![Build Status](https://travis-ci.org/TyrSnow/wxServer.svg?branch=develop)](https://travis-ci.org/TyrSnow/wxServer)
+[![Build Status](https://travis-ci.org/TyrSnow/wxServer.svg?branch=develop)](https://travis-ci.org/TyrSnow/wxServer) [![codecov](https://codecov.io/gh/TyrSnow/wxServer/branch/develop/graph/badge.svg)](https://codecov.io/gh/TyrSnow/wxServer)
