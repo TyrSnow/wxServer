@@ -14,3 +14,4 @@ run/
 *.js
 !.eslintrc.js
 !test/**/*.js
+!test.js
