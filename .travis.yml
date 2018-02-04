@@ -1,24 +1,26 @@
 sudo: false
-test:
-  language: node_js
-  addons:
-    apt:
-      packages:
-        - sshpass
-  node_js:
-    - '8'
-  install:
-    - npm i npminstall && npminstall
-  script:
-    - npm run ci
-  after_script:
-    - npminstall codecov && codecov
-  on:
-    branch: develop
-    branch: master
-deploy:
-  script:
-    - node test.js
+language: node_js
+node_js:
+  - '8'
+install:
+  - npm i npminstall && npminstall
+script:
+  - npm run ci
+after_script:
+  - npminstall codecov && codecov
+on:
+  branch: develop
+  branch: master
+
+sudo: true
+addons:
+  apt:
+    packages:
+      - sshpass
+script:
+  - node test.js
+on:
+  branch: master
 
 
 
