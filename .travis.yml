@@ -2,6 +2,13 @@ sudo: false
 language: node_js
 node_js:
   - '8'
+jobs:
+  include:
+    if: branch = master
+    addons:
+      apt:
+        packages:
+          - sshpass
 install:
   - npm i npminstall && npminstall
 script:
@@ -11,10 +18,6 @@ after_script:
 jobs:
   include:
     if: branch = master
-    addons:
-      apt:
-        packages:
-          - sshpass
     script:
       - node test.js
 
