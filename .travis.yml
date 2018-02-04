@@ -8,19 +8,15 @@ script:
   - npm run ci
 after_script:
   - npminstall codecov && codecov
-on:
-  branch: develop
-  branch: master
-
-sudo: true
-addons:
-  apt:
-    packages:
-      - sshpass
-script:
-  - node test.js
-on:
-  branch: master
+jobs:
+  include:
+    if: branch = master
+    addons:
+      apt:
+        packages:
+          - sshpass
+    script:
+      - node test.js
 
 
 
