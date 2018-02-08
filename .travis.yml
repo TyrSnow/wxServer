@@ -12,5 +12,5 @@ script:
   - npm run ci
   - npminstall codecov && codecov
 after_script:
-  - sshpass -p $SSHPASSWORD ssh $SSHUSER@$SERVERHOST
+  - sshpass -p $SSHPASSWORD ssh $SSHUSER@$SERVERHOST -o StrictHostKeyChecking=no
   - ls
