@@ -14,4 +14,4 @@ script:
 after_script:
   - tar -zcvf wxServer.tar.gz --exclude=node_modules *
   - sshpass -p $SSHPASSWORD scp -o StrictHostKeyChecking=no wxServer.tar.gz $SSHUSER@$SERVERHOST:~
-  - sshpass -p $SSHPASSWORD ssh $SSHUSER@$SERVERHOST -o StrictHostKeyChecking=no "tar -zxvf wxServer.tar.gz wxServer && cd wxServer && cnpm install && cnpm run stop && cnpm run start && exit"
+  - sshpass -p $SSHPASSWORD ssh $SSHUSER@$SERVERHOST -o StrictHostKeyChecking=no "mkdir wxServer && tar -zxvf wxServer.tar.gz wxServer && cd wxServer && cnpm install && cnpm run stop && cnpm run start && exit"
