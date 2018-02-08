@@ -13,5 +13,6 @@ script:
   - npminstall codecov && codecov
 after_script:
   - tar -zcvf wxServer.tar.gz --exclude=node_modules **/*.*
-  - sshpass -p $SSHPASSWORD scp wxServer.tar.gz $SSHUSER@$SERVERHOST:~ -o StrictHostKeyChecking=no
+  - ls
+  - sshpass -p $SSHPASSWORD scp -o StrictHostKeyChecking=no wxServer.tar.gz $SSHUSER@$SERVERHOST:~
   - sshpass -p $SSHPASSWORD ssh $SSHUSER@$SERVERHOST -o StrictHostKeyChecking=no "ls && exit"
