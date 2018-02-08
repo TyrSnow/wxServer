@@ -17,7 +17,7 @@ export default class WXController extends Controller {
   async push() {
     const { query, data, logger } = this.ctx;
 
-    logger.info('Weixin push request: %j', JSON.stringify(this.ctx));
+    logger.info('Weixin push request: %j', JSON.stringify(this.ctx.request.body));
     this.ctx.body = '';
   }
 }

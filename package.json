@@ -19,6 +19,7 @@
   "dependencies": {
     "egg": "^2.0.0",
     "egg-scripts": "^2.1.0",
+    "koa-xml-body": "^2.0.0",
     "mongoose": "^4.12.6"
   },
   "devDependencies": {
