@@ -1,19 +1,10 @@
 import { Controller } from 'egg';
-import * as crypto from 'crypto';
 export default class WXController extends Controller {
   async index() {
     const { query } = this.ctx;
     const { signature, timestamp, nonce, echostr } = query;
-    const { WX_TOKEN } = process.env;
     
-    const queryArray = [WX_TOKEN, timestamp, nonce].sort((a, b) => {
-      return a < b ? -1 : 1;
-    });
-    let strQuery = queryArray.join('');
-
-    let hash = crypto.createHash('sha1');
-    hash.update(strQuery);
-    let sign = hash.digest('hex');
+    let sign = this.ctx.service.wx.sign(timestamp, nonce);
 
     if (sign === signature) {
       this.ctx.body = echostr;
@@ -24,8 +15,10 @@ export default class WXController extends Controller {
   }
 
   async push() {
-    const { query, logger } = this.ctx;
-    logger.info('Weixin push data: %j', query);
+    const { query, data, logger } = this.ctx;
+
+    logger.info('Weixin push data: %j', data);
+    logger.info('Weixin push query: %j', query);
     this.ctx.body = '';
   }
 }
