@@ -22,4 +22,10 @@ export default class WXController extends Controller {
       this.ctx.body = 'Signature not match.';
     }
   }
+
+  async push() {
+    const { query, logger } = this.ctx;
+    logger.info('Weixin push data: %j', query);
+    this.ctx.body = '';
+  }
 }

@@ -26,4 +26,10 @@ describe('test/app/controller/wx.test.js', () => {
       .expect('2500486904219040247')
       .expect(200);
   });
+
+  it('should post 200', () => {
+    return app.httpRequest()
+      .post('/wx')
+      .expect(200);
+  });
 });

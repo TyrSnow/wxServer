@@ -12,6 +12,7 @@ run/
 *.un~
 *.map
 *.js
+**/*.js
 !.eslintrc.js
 !test/**/*.js
 !test.js
