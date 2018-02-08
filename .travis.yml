@@ -6,7 +6,6 @@ addons:
   apt:
     packages:
       - sshpass
-      - scp
 install:
   - npm i npminstall && npminstall
 script:
