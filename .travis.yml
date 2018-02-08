@@ -2,24 +2,15 @@ sudo: false
 language: node_js
 node_js:
   - '8'
-jobs:
-  include:
-    if: branch = master
-    addons:
-      apt:
-        packages:
-          - sshpass
+addons:
+  apt:
+    packages:
+      - sshpass
 install:
   - npm i npminstall && npminstall
 script:
   - npm run ci
-after_script:
   - npminstall codecov && codecov
-jobs:
-  include:
-    if: branch = master
-    script:
-      - node test.js
-
-
-
+after_script:
+  - sshpass -p $SSHPASSWORD ssh $SSHUSER@$SERVERHOST
+  - ls
