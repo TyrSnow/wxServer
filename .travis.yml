@@ -15,3 +15,6 @@ after_script:
   - tar -zcvf wxServer.tar.gz --exclude=node_modules *
   - sshpass -p $SSHPASSWORD scp -o StrictHostKeyChecking=no wxServer.tar.gz $SSHUSER@$SERVERHOST:~
   - sshpass -p $SSHPASSWORD ssh $SSHUSER@$SERVERHOST -o StrictHostKeyChecking=no "tar -zxvf wxServer.tar.gz -C wxServer/ && cd wxServer && export WX_TOKEN=$WX_TOKEN && bash ./deploy.sh"
+branches:
+  only:
+  - master
