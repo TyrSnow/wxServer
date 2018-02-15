@@ -1,4 +1,4 @@
-cnpm install
-cnpm run stop
-cnpm run start
+yarn install
+yarn run stop
+yarn run start
 exit
